@@ -1,5 +1,5 @@
 {
-  "homepage": "https://Santhosh0205.github.io/SanFLix_app",
+  "homepage": "https://santhosh0205.github.io/SanFlix_app/",
   "start": "react-scripts start",
   "build": "react-scripts build",
   "predeploy": "npm run build",
