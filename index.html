@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, initial-scale=1" />
+    <title>SanFlix</title>
+
+    <!-- Corrected Favicon Path -->
+    <link rel="icon" type="image/png" href="/src/assets/fav_icon.png" />
+
+    <!-- Custom Styles -->
+    <style>
+      /* Background and Loading Animation */
+      body {
+        background-color: #111;
+        color: white;
+        font-family: Arial, sans-serif;
+        text-align: center;
+        margin: 0;
+      }
+      
+      #loading {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 18px;
+        color: #ffcc00;
+      }
+
+      /* Hide loading when React loads */
+      #root:has(*) + #loading {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    
+
+    <!-- React Root -->
+    <div id="root"></div>
+
+    <!-- React App -->
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

@@ -1,0 +1,138 @@
+/* Home Container */
+.home-container {
+  width: 100%;  /* Ensures it spans the full screen */
+  max-width: 1200px; /* Optional: limits width for better UI */
+  margin: auto;
+}
+
+
+/* Search Bar */
+.search-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 80px;
+  padding: 20px;
+}
+
+.favorite-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
+}
+
+
+.search-container input {
+  width: 60%;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  background: #333;
+  color: white;
+  font-size: 1rem;
+}
+
+.search-container button {
+  padding: 12px 20px;
+  margin-left: 10px;
+  background: #1198ff;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+.search-container button:hover {
+  background: #1cb0ff;
+}
+
+/* Movie Grid */
+/* Fix movie grid layout */
+.movie-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Movie Cards */
+.movie-card {
+  background: #222;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  cursor: pointer;
+  text-align: center;
+  position: relative;
+}
+
+.movie-card img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+/* Hover Effect */
+.movie-card:hover {
+  transform: scale(1.08);
+  box-shadow: 0 8px 20px rgba(255, 255, 255, 0.3);
+}
+
+/* Movie Info */
+.movie-info {
+  padding: 10px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 0.3s ease-in-out;
+}
+
+.movie-card:hover .movie-info {
+  opacity: 1;
+}
+
+.movie-title {
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+}
+
+.movie-year {
+  color: #999;
+  font-size: 0.9rem;
+}
+
+/* Floating Animation */
+@keyframes floatUp {
+  0% {
+    transform: translateY(10px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.movie-card {
+  animation: floatUp 0.5s ease-in-out;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .movie-grid {
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  }
+
+  .search-container input {
+    width: 100%;
+  }
+}

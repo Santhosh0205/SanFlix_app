@@ -1,0 +1,88 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.8);
+  padding: 12px 40px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.brand {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #00aaff;
+  font-family: "Poppins", sans-serif;
+  text-transform: uppercase;
+  transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.brand:hover {
+  transform: scale(1.1);
+  color: #45ff07;
+}
+
+.search-form {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  padding: 5px 15px;
+}
+
+.search-input {
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 1rem;
+  outline: none;
+  padding: 5px;
+  width: 200px;
+}
+
+.search-input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.search-button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.search-button:hover {
+  opacity: 0.7;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-item {
+  text-decoration: none;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  transition: color 0.3s ease-in-out;
+  position: relative;
+}
+
+.nav-item.active {
+  color: #33ebff;
+  border-bottom: 2px solid #3381ff; /* Adds an underline effect */
+  padding-bottom: 3px;
+}
+
+
+.nav-item:hover {
+  color: #03ff5f;
+}
